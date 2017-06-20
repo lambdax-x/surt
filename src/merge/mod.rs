@@ -31,3 +31,5 @@ pub fn merge<T: Ord + Copy>(v: &mut [T], middle: usize) {
         }
     }
 }
+
+pub mod insertion;
