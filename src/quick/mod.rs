@@ -10,7 +10,7 @@ pub fn sort<T: Ord>(v: &mut [T]) {
     }
 }
 
-fn partition<T: Ord>(v: &mut [T]) -> usize {
+pub fn partition<T: Ord>(v: &mut [T]) -> usize {
     let p = v.len() - 1;
     let mut next_swap: usize = 0;
     for j in 0 .. p {
@@ -22,3 +22,5 @@ fn partition<T: Ord>(v: &mut [T]) -> usize {
     v.swap(next_swap, p);
     next_swap
 }
+
+pub mod randomized;
