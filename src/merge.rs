@@ -12,7 +12,7 @@ pub fn sort<T: Ord + Copy>(v: &mut [T]) {
     }
 }
 
-fn merge<T: Ord + Copy>(v: &mut [T], middle: usize) {
+pub fn merge<T: Ord + Copy>(v: &mut [T], middle: usize) {
     let len = v.len();
     let mut w = Vec::<T>::new();
     for i in 0 .. len {
