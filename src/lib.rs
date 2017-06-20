@@ -1,6 +1,7 @@
-pub mod insertionsort;
-pub mod mergesort;
-pub mod heapsort;
+pub mod insertion;
+pub mod merge;
+pub mod heap;
+pub mod quick;
 
 #[cfg(test)]
 mod tests {
