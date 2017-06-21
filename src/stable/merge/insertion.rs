@@ -1,5 +1,5 @@
-use merge;
-use insertion;
+use stable::merge;
+use stable::insertion;
 
 pub fn sort<T: Ord + Copy>(v: &mut [T], threshold: usize) {
     match v.len() {

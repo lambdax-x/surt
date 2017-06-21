@@ -1,4 +1,4 @@
-use quick;
+use unstable::quick;
 
 pub fn sort<F, T: Ord>(rand: &F, v: &mut [T])
 where F: Fn() -> usize {

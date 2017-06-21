@@ -1,8 +1,5 @@
-pub mod insertion;
-pub mod merge;
-pub mod heap;
-pub mod quick;
 pub mod stable;
+pub mod unstable;
 
 #[cfg(test)]
 mod tests {
