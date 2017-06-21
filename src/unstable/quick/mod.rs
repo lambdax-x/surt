@@ -1,7 +1,6 @@
 pub fn sort<T: Ord>(v: &mut [T]) {
     match v.len() {
-        0 => return,
-        1 => return,
+        0 | 1 => return,
         len => {
             let p = partition(v); 
             sort(&mut v[0 .. p]);

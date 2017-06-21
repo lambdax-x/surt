@@ -1,8 +1,7 @@
 pub fn sort<T: Ord + Copy>(v: &mut [T]) {
     let len = v.len();
     match len {
-        0 => return,
-        1 => return,
+        0 | 1 => return,
         _ => {
             let middle = len / 2;
             sort(&mut v[0 .. middle]);

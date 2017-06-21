@@ -6,10 +6,12 @@ pub fn sort_with(max: u32, v: &mut [u32]) {
         let i = *e as usize;
         count[i] += 1;
     }
+    /// count[e]: number of occurences of e in v
 
     for i in 1 .. count_len {
         count[i] += count[i - 1];
     }
+    /// count[e]: number of occurences less or equal than e in v
 
     let mut w = vec![0; v.len()];
 

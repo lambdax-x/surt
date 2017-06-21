@@ -3,8 +3,7 @@ use unstable::quick;
 pub fn sort<F, T: Ord>(rand: &F, v: &mut [T])
 where F: Fn() -> usize {
     match v.len() {
-        0 => return,
-        1 => return,
+        0  | 1 => return,
         len => {
             let p = randomized_partition(rand, v); 
             sort(rand, &mut v[0 .. p]);

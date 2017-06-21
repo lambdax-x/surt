@@ -3,8 +3,7 @@ use stable::insertion;
 
 pub fn sort<T: Ord + Copy>(v: &mut [T], threshold: usize) {
     match v.len() {
-        0 => return,
-        1 => return,
+        0 | 1 => return,
         len if len <= threshold => insertion::sort(v),
         len => {
             let middle = len / 2;
