@@ -1,4 +1,4 @@
-pub fn sort_with(max: u32, v: &mut [u32]) {
+pub fn sort(max: u32, v: &mut [u32]) {
     let count_len = (max + 1) as usize;
     let mut count: Vec<usize> = vec![0; count_len];
 
