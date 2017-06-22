@@ -1,9 +1,5 @@
 pub mod stable;
 pub mod unstable;
 
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-    }
-}
+#[cfg(test)] extern crate quickcheck;
+#[cfg(test)] mod tests;
