@@ -1,6 +1,6 @@
 macro_rules! next {
-    ($node:expr, Left) => { $node * 2 };
-    ($node:expr, Right) => { $node * 2 + 1 };
+    ($node:expr, Left) => { ($node + 1) * 2 - 1};
+    ($node:expr, Right) => { ($node + 1) * 2 };
 }
 
 macro_rules! last_parent {
@@ -32,9 +32,14 @@ impl<'a, T: Ord> Heap<'a, T> {
     }
 
     fn build_max_heap(&mut self) {
-        let first = last_parent!(self.size);
-        for node in (0 .. first + 1).rev() {
-            self.max_heapify(node);
+        match self.size {
+            0 | 1 => return,
+            size => {
+                let first = last_parent!(size);
+                for node in (0 .. first + 1).rev() {
+                    self.max_heapify(node);
+                }
+            }
         }
     }
 
