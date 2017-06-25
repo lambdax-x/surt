@@ -21,7 +21,7 @@ pub fn merge<T: Ord + Copy>(v: &mut [T], middle: usize) {
     let mut left = 0;
     let mut right = middle;
     for k in 0 .. len {
-        if left < middle && (right == len || w[left] < w[right]) {
+        if left < middle && (right == len || w[left] <= w[right]) {
             v[k] = w[left];
             left += 1;
         } else {
