@@ -6,3 +6,4 @@ authors = ["λx.x"]
 [dependencies]
 rand = "0.3"
 quickcheck = "0.4"
+quickcheck_macros = "0.4"
