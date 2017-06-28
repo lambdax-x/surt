@@ -2,6 +2,16 @@
 name = "surt"
 version = "0.1.0"
 authors = ["λx.x"]
+description = "Implementations of sorting algorithms in Rust"
+license-file = "LICENSE"
+readme = "README.md"
+homepage = "https://github.com/lambdax-x/surt"
+documentation = "https://github.com/lambdax-x/surt"
+keywords = ["sort", "algorithm"]
+categories = ["algorithms"]
+
+[lib]
+name = "surt"
 
 [dependencies]
 rand = "0.3"
